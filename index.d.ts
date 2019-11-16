@@ -1,4 +1,4 @@
-declare module "react-native-switch-selector" {
+declare module "react-native-switch-selector-fix" {
   import { Component } from "react";
   import {
     ImageStyle,

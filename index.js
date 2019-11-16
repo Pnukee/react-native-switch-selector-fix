@@ -50,7 +50,7 @@ export default class SwitchSelector extends Component {
     if (prevProps.value !== this.props.value) {
       this.toggleItem(prevProps.value, !this.props.disableValueChangeOnPress);
     }
-  }
+  };
 
   shouldSetResponder = (evt, gestureState) => {
     return (
@@ -101,6 +101,7 @@ export default class SwitchSelector extends Component {
   };
 
   toggleItem = (index, callOnPress = true) => {
+    if (this.props.disabled) return;
     const { options, returnObject, onPress } = this.props;
     if (options.length <= 1 || index === null || isNaN(index)) return;
     this.animate(
