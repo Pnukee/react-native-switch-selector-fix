@@ -214,11 +214,11 @@ export default class SwitchSelector extends Component {
                 <Animated.View
                   style={[
                     {
-                      height: hasPadding ? height - 4 : height,
+                      height: hasPadding ? height  : height,
                       backgroundColor: this.getBgColor(),
                       width:
                         this.state.sliderWidth / this.props.options.length -
-                        ((hasPadding ? valuePadding : 0) + (buttonMargin * 2)),
+                        ((hasPadding ? valuePadding : 0) + (buttonMargin * 2) - 2),
                       transform: [
                         {
                           translateX: this.animatedValue.interpolate({
@@ -232,7 +232,7 @@ export default class SwitchSelector extends Component {
                         }
                       ],
                       borderRadius: borderRadius,
-                      margin: buttonMargin
+                      margin: buttonMargin - 1
                     },
                     styles.animated
                   ]}
